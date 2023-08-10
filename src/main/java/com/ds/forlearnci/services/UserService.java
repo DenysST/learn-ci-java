@@ -37,10 +37,10 @@ public class UserService {
         return nickNames.get(indexNumber);
     }
 
-//    private void testMethod() {
-//        ArrayList<Object> objects = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            objects.add(i);
-//        }
-//    }
+    private void testMethod() {
+        ArrayList<Object> objects = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            objects.add(i);
+        }
+    }
 }
