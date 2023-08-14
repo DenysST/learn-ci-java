@@ -61,13 +61,12 @@ jobs:
       - name: Build project
         run: ./gradlew build
 
-      - uses: mr-smithers-excellent/docker-build-push@v6
-        name: Build & push Docker image
-        with:
-          image: denny0304/learn-ci
-          tags: v1, latest
-          registry: docker.io
-          dockerfile: Dockerfile.ci
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+      - name: Login to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build and Push Docker image
+        run: |
+          docker build -t image-name .
+          docker tag test-tag
+          docker push denny0304/learn-ci
 
