@@ -67,6 +67,6 @@ jobs:
       - name: Build and Push Docker image
         run: |
           docker build -t image-name .
-          docker tag image-name denny0304/learn-ci:test-tag
-          docker push denny0304/learn-ci:test-tag
+          docker tag image-name denny0304/learn-ci:$GITHUB_SHA
+          docker push denny0304/learn-ci:$GITHUB_SHA
 
