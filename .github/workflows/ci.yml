@@ -44,7 +44,12 @@ jobs:
         run: ./gradlew test jacocoTestReport sonarqube
 
       - name: Show dirs
-        run: ls -all
+        run: |
+          ls -all
+          cd build
+          ls -all
+          cd libs
+          ls -all
 
   docker:
     needs: build
