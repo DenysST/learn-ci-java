@@ -61,14 +61,13 @@ jobs:
       - name: Build project
         run: ./gradlew build
 
-      - name: Build docker image and push
-        id: build
-        uses: cloudposse/github-action-docker-build-push@main
+      - uses: mr-smithers-excellent/docker-build-push@v6
+        name: Build & push Docker image
         with:
-          registry: registry.hub.docker.com
-          organization: denny0304
-          repository: learn-ci
-          login: "${{ secrets.DOCKERHUB_USERNAME }}"
-          password: "${{ secrets.DOCKERHUB_TOKEN }}"
-          platforms: linux/amd64,linux/arm64
+          image: repo/image
+          tags: v1, latest
+          registry: registry-url.io
+          dockerfile: Dockerfile.ci
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
 
