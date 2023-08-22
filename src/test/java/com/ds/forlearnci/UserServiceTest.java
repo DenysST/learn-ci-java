@@ -11,8 +11,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class UserServiceTest {
@@ -52,6 +51,15 @@ public class UserServiceTest {
         assertNotNull(createdUser.getNickName());
 
         verify(repository, times(1)).save(any(User.class));
+    }
+
+    @Test
+    public void someTest() {
+        boolean result = userService.testMethod2();
+
+
+        assertTrue(result);
+
     }
 }
 

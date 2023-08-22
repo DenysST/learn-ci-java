@@ -43,4 +43,27 @@ public class UserService {
             objects.add(i);
         }
     }
+
+    public boolean testMethod2() {
+        ArrayList<Object> objects2 = new ArrayList<>();
+        for (int i = 0; i < 14; i++) {
+            objects2.add(i);
+        }
+        return true;
+    }
+
+    public boolean testMethod3() {
+        ArrayList<Object> objects2 = new ArrayList<>();
+        for (int i = 0; i < 14; i++) {
+            objects2.add(i);
+        }
+        return true;
+    }
+    public boolean testMethod4() {
+        ArrayList<Object> objects2 = new ArrayList<>();
+        for (int i = 0; i < 14; i++) {
+            objects2.add(i);
+        }
+        return true;
+    }
 }
