@@ -57,6 +57,7 @@ public class UserServiceTest {
     public void someTest() {
         boolean result = userService.testMethod2();
 
+
         assertTrue(result);
 
     }
