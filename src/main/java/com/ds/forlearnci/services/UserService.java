@@ -44,10 +44,11 @@ public class UserService {
         }
     }
 
-    private void testMethod2() {
+    public boolean testMethod2() {
         ArrayList<Object> objects2 = new ArrayList<>();
         for (int i = 0; i < 14; i++) {
             objects2.add(i);
         }
+        return true;
     }
 }
