@@ -43,4 +43,11 @@ public class UserService {
             objects.add(i);
         }
     }
+
+    private void testMethod2() {
+        ArrayList<Object> objects2 = new ArrayList<>();
+        for (int i = 0; i < 14; i++) {
+            objects2.add(i);
+        }
+    }
 }
